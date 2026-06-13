@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EMPRENDE IA | Innovación para Jóvenes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f8ff;
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,#4f46e5,#06b6d4);
+color:white;
+padding:80px 10%;
+text-align:center;
+}
+
+header h1{
+font-size:4rem;
+font-weight:800;
+}
+
+header p{
+font-size:1.3rem;
+margin-top:15px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:white;
+color:#4f46e5;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+nav{
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+font-weight:600;
+color:#333;
+}
+
+section{
+padding:70px 10%;
+}
+
+.titulo{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+color:#4f46e5;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#4f46e5;
+margin-bottom:10px;
+}
+
+.ideas{
+background:#e0f2fe;
+border-radius:20px;
+padding:40px;
+text-align:center;
+}
+
+.ideas textarea{
+width:100%;
+height:120px;
+padding:15px;
+border:none;
+border-radius:10px;
+margin-top:15px;
+}
+
+.ideas button{
+margin-top:20px;
+padding:15px 30px;
+border:none;
+background:#4f46e5;
+color:white;
+font-weight:bold;
+border-radius:30px;
+cursor:pointer;
+}
+
+.resultado{
+margin-top:20px;
+background:white;
+padding:20px;
+border-radius:15px;
+font-weight:bold;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+}
+
+footer{
+background:#1e293b;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<h1>🚀 EMPRENDE IA</h1>
+
+<p>
+La plataforma juvenil que impulsa ideas innovadoras, emprendimientos estudiantiles y proyectos tecnológicos.
+Aprende, crea, comparte y transforma tus ideas en negocios reales con ayuda de la inteligencia artificial.
+</p>
+
+<a href="#ideas" class="btn">Comenzar Ahora</a>
+
+</header>
+
+<nav>
+<a href="#sobre">Sobre Nosotros</a>
+<a href="#ideas">Generador IA</a>
+<a href="#emprendimientos">Emprendimientos</a>
+<a href="#galeria">Galería</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<section id="sobre">
+
+<h2 class="titulo">¿Qué es EMPRENDE IA?</h2>
+
+<p style="text-align:center;font-size:1.1rem;">
+EMPRENDE IA es una iniciativa orientada a estudiantes y jóvenes emprendedores.
+Nuestro objetivo es fomentar la creatividad, el liderazgo, la innovación y el desarrollo de proyectos que generen impacto positivo en la sociedad.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Beneficios</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💡 Ideas Innovadoras</h3>
+<p>Descubre nuevas oportunidades de negocio adaptadas a las necesidades actuales.</p>
+</div>
+
+<div class="card">
+<h3>🤖 Inteligencia Artificial</h3>
+<p>Utiliza herramientas modernas para mejorar tus proyectos y emprendimientos.</p>
+</div>
+
+<div class="card">
+<h3>📈 Crecimiento</h3>
+<p>Aprende estrategias para convertir tus ideas en negocios sostenibles.</p>
+</div>
+
+<div class="card">
+<h3>🌎 Impacto Social</h3>
+<p>Desarrolla proyectos que ayuden a tu comunidad y generen cambios positivos.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="ideas">
+
+<h2 class="titulo">Generador de Ideas de Negocio</h2>
+
+<div class="ideas">
+
+<p>
+Escribe un tema que te guste y obtén una idea de emprendimiento.
+</p>
+
+<textarea id="tema" placeholder="Ejemplo: Tecnología, Deportes, Música, Comida..."></textarea>
+
+<br>
+
+<button onclick="generarIdea()">Generar Idea</button>
+
+<div class="resultado" id="resultado">
+Tu idea aparecerá aquí...
+</div>
+
+</div>
+
+</section>
+
+<section id="emprendimientos">
+
+<h2 class="titulo">Emprendimientos Estudiantiles</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🍔 Fast Food Escolar</h3>
+<p>Venta de alimentos saludables y económicos para estudiantes.</p>
+</div>
+
+<div class="card">
+<h3>🎨 Diseño Creativo</h3>
+<p>Creación de logos, publicidad y contenido digital.</p>
+</div>
+
+<div class="card">
+<h3>💻 Programación Web</h3>
+<p>Desarrollo de páginas web para pequeños negocios.</p>
+</div>
+
+<div class="card">
+<h3>📚 Tutorías Virtuales</h3>
+<p>Apoyo académico mediante plataformas digitales.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2 class="titulo">Galería de Inspiración</h2>
+
+<div class="galeria">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800" alt="">
+
+</div>
+
+</section>
+
+<section id="contacto">
+
+<h2 class="titulo">Contacto</h2>
+
+<div class="card">
+
+<p><b>Correo:</b> contacto@emprendeia.com</p>
+<p><b>WhatsApp:</b> +51 999 999 999</p>
+<p><b>Instagram:</b> @emprendeia</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>EMPRENDE IA 2026</h2>
+
+<p>
+Innovación, creatividad y emprendimiento para las nuevas generaciones.
+</p>
+
+</footer>
+
+<script>
+
+function generarIdea(){
+
+const ideas = [
+
+"Crear una aplicación que conecte estudiantes con tutores académicos.",
+
+"Desarrollar una tienda virtual de productos ecológicos.",
+
+"Crear una plataforma para promocionar emprendimientos juveniles.",
+
+"Diseñar una aplicación para organizar tareas escolares.",
+
+"Crear contenido educativo con inteligencia artificial.",
+
+"Desarrollar una agencia de marketing digital para pequeños negocios.",
+
+"Crear un servicio de asesoría tecnológica para emprendedores.",
+
+"Vender productos personalizados mediante impresión 3D."
+
+];
+
+let aleatoria = ideas[Math.floor(Math.random()*ideas.length)];
+
+document.getElementById("resultado").innerHTML = aleatoria;
+
+}
+
+</script>
+
+</body>
+</html>
